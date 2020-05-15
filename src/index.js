@@ -10,8 +10,8 @@ import edit from './edit';
 
 registerFormatType( 'mamaduka/highlight', {
 	title: 'Highlight',
-	tagName: 'mark',
-	className: null,
+	tagName: 'span',
+	className: 'has-highlight-color',
 	attributes: {
 		style: 'style',
 	},

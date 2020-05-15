@@ -17,7 +17,13 @@
 	},
 	"main": "build/index.js",
 	"devDependencies": {
-		"@wordpress/scripts": "^9.0.0"
+		"@wordpress/scripts": "^9.0.0",
+		"css-loader": "^3.4.2",
+		"ignore-emit-webpack-plugin": "^2.0.2",
+		"mini-css-extract-plugin": "^0.9.0",
+		"node-sass": "^4.13.1",
+		"optimize-css-assets-webpack-plugin": "^5.0.3",
+		"sass-loader": "^8.0.2"
 	},
 	"scripts": {
 		"build": "wp-scripts build",
