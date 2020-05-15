@@ -2,6 +2,8 @@
 
 Spice up your text by giving it a <mark>color highligh</mark>.
 
+Text highligher for the WordPress Block Editor (Gutenberg).
+
 ![Text color highlighter screenshot](.wordpress-org/screenshot-1.png)
 
 ## Requirements
