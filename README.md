@@ -1,6 +1,6 @@
 # Highlight
 
-Spice up your text by giving it a <mark>color highligh</mark>.
+Spice up your text by giving it a <mark>color highlight</mark>.
 
 Text highligher for the WordPress Block Editor (Gutenberg).
 
