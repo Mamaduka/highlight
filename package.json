@@ -15,7 +15,7 @@
 	"bugs": {
 		"url": "https://github.com/Mamaduka/highlight/issues"
 	},
-	"main": "src/index.js",
+	"main": "build/index.js",
 	"devDependencies": {
 		"@wordpress/scripts": "^9.0.0"
 	},
