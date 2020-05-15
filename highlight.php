@@ -4,7 +4,7 @@
  * Plugin URI:        https://github.com/Mamaduka/highlight
  * Description:       Text highligher for the Block Editor
  * Version:           1.0.0
- * Requires at least: 5.2
+ * Requires at least: 5.3
  * Requires PHP:      5.6
  * Author:            George Mamadashvili
  * Author URI:        https://mamaduka.com/
