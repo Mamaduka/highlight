@@ -8,10 +8,16 @@
 		"wordpress"
 	],
 	"homepage": "https://github.com/Mamaduka/highlight",
-	"main": "src/index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Mamaduka/highlight"
+	},
+	"bugs": {
+		"url": "https://github.com/Mamaduka/highlight/issues"
+	},
+	"main": "src/index.js",
+	"devDependencies": {
+		"@wordpress/scripts": "^9.0.0"
 	},
 	"scripts": {
 		"build": "wp-scripts build",
@@ -20,8 +26,5 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"start": "wp-scripts start",
 		"test:unit": "wp-scripts test-unit-js"
-	},
-	"devDependencies": {
-		"@wordpress/scripts": "^9.0.0"
 	}
 }
