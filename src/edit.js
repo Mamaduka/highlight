@@ -3,6 +3,11 @@
  */
 import { BlockFormatControls } from '@wordpress/block-editor';
 import {
+	applyFormat,
+	getActiveFormat,
+	removeFormat,
+} from '@wordpress/rich-text';
+import {
 	ColorPalette,
 	Dropdown,
 	IconButton,
@@ -19,7 +24,29 @@ const COLORS = [
 	{ name: 'Red', color: '#fbe4e4' },
 ];
 
-export default function HighlightEdit( props ) {
+const name = 'mamaduka/highlight';
+
+export default function HighlightEdit( { value, onChange } ) {
+	const { attributes } = getActiveFormat( value, name ) || {};
+	const currentColor = attributes ? attributes.dataColor : undefined;
+
+	function toggleHighlight( color ) {
+		if ( ! color ) {
+			onChange( removeFormat( value, name ) );
+			return;
+		}
+
+		onChange(
+			applyFormat( value, {
+				type: name,
+				attributes: {
+					dataColor: color,
+					style: `background: ${ color };`,
+				},
+			} )
+		);
+	}
+
 	return (
 		<BlockFormatControls>
 			<Toolbar>
@@ -39,9 +66,9 @@ export default function HighlightEdit( props ) {
 					renderContent={ () => (
 						<ColorPalette
 							colors={ COLORS }
-							value="#fbf3db"
+							value={ currentColor }
 							clearable={ true }
-							onChange={ ( color ) => console.log( { color } ) }
+							onChange={ toggleHighlight }
 						/>
 					) }
 				/>

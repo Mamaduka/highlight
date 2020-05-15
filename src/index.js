@@ -13,6 +13,7 @@ registerFormatType( 'mamaduka/highlight', {
 	tagName: 'span',
 	className: 'has-highlight-color',
 	attributes: {
+		dataColor: 'data-color',
 		style: 'style',
 	},
 	edit,
