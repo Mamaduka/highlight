@@ -1,0 +1,27 @@
+{
+	"name": "mamaduka-highlight",
+	"version": "1.0.0",
+	"description": "Text highligher for the Block Editor",
+	"author": "George Mamadashvili",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress"
+	],
+	"homepage": "https://github.com/Mamaduka/highlight",
+	"main": "src/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Mamaduka/highlight"
+	},
+	"scripts": {
+		"build": "wp-scripts build",
+		"lint:style": "wp-scripts lint-style",
+		"lint:scripts": "wp-scripts lint-js ./src",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"start": "wp-scripts start",
+		"test:unit": "wp-scripts test-unit-js"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^9.0.0"
+	}
+}
