@@ -14,6 +14,11 @@ import {
 	Toolbar,
 } from '@wordpress/components';
 
+/**
+ * Internal dependencies
+ */
+import icon from './icon';
+
 const COLORS = [
 	{ name: 'Yellow', color: '#fbf3db' },
 	{ name: 'Orange', color: '#faebdd' },
@@ -56,7 +61,7 @@ export default function HighlightEdit( { value, onChange } ) {
 					position="bottom right"
 					renderToggle={ ( { isOpen, onToggle } ) => (
 						<IconButton
-							icon="editor-textcolor"
+							icon={ icon }
 							label="Highlight color"
 							aria-haspopup="true"
 							aria-expanded={ isOpen }
