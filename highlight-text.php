@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Highlight
+ * Plugin Name:       Highlight Text
  * Plugin URI:        https://github.com/Mamaduka/highlight
  * Description:       Text highligher for the Block Editor
  * Version:           1.0.0

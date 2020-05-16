@@ -1,4 +1,4 @@
-# Highlight
+# Highlight Text
 
 Spice up your text by giving it a <mark>color highlight</mark>.
 
