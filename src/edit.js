@@ -2,11 +2,7 @@
  * WordPress dependencies
  */
 import { BlockFormatControls } from '@wordpress/block-editor';
-import {
-	applyFormat,
-	getActiveFormat,
-	removeFormat,
-} from '@wordpress/rich-text';
+import { applyFormat, removeFormat } from '@wordpress/rich-text';
 import {
 	ColorPalette,
 	Dropdown,
@@ -31,9 +27,8 @@ const COLORS = [
 
 const name = 'mamaduka/highlight';
 
-export default function HighlightEdit( { value, onChange } ) {
-	const { attributes } = getActiveFormat( value, name ) || {};
-	const currentColor = attributes ? attributes.dataColor : undefined;
+export default function HighlightEdit( { activeAttributes, value, onChange } ) {
+	const { dataColor: currentColor } = activeAttributes;
 
 	function toggleHighlight( color ) {
 		if ( ! color ) {
