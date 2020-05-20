@@ -2,7 +2,7 @@
  * WordPress dependencies
  */
 import { BlockFormatControls } from '@wordpress/block-editor';
-import { applyFormat, removeFormat } from '@wordpress/rich-text';
+import { toggleFormat } from '@wordpress/rich-text';
 import {
 	ColorPalette,
 	Dropdown,
@@ -31,13 +31,8 @@ export default function HighlightEdit( { activeAttributes, value, onChange } ) {
 	const { dataColor: currentColor } = activeAttributes;
 
 	function toggleHighlight( color ) {
-		if ( ! color ) {
-			onChange( removeFormat( value, name ) );
-			return;
-		}
-
 		onChange(
-			applyFormat( value, {
+			toggleFormat( value, {
 				type: name,
 				attributes: {
 					dataColor: color,
