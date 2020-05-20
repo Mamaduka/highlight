@@ -1,8 +1,13 @@
 name: Plugin asset/readme update
+
 on:
   push:
     branches:
     - master
+    paths:
+    - '.wordpress-org/**'
+    - '**.txt'
+
 jobs:
   master:
     name: Push to master
