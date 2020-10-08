@@ -38,7 +38,7 @@ function enqueue_editor_assets() {
 
 	wp_enqueue_style(
 		'mamaduka-highlight-style',
-		plugins_url( 'build/editor.css', __FILE__ ),
+		plugins_url( 'build/index.css', __FILE__ ),
 		[],
 		$asset_file['version']
 	);

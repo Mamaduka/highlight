@@ -14,6 +14,7 @@ import {
  * Internal dependencies
  */
 import icon from './icon';
+import './editor.scss';
 
 const COLORS = [
 	{ name: 'Yellow', color: '#fbf3db' },
