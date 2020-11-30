@@ -8,4 +8,4 @@ Text highligher for the WordPress Block Editor (Gutenberg).
 
 ## Requirements
 * PHP 5.6+
-* WordPress 5.3+
+* WordPress 5.5+
