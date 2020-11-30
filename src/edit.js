@@ -1,14 +1,8 @@
 /**
  * WordPress dependencies
  */
-import { BlockFormatControls } from '@wordpress/block-editor';
 import { toggleFormat } from '@wordpress/rich-text';
-import {
-	ColorPalette,
-	Dropdown,
-	IconButton,
-	Toolbar,
-} from '@wordpress/components';
+import { Button, ColorPalette, Dropdown, Fill } from '@wordpress/components';
 
 /**
  * Internal dependencies
@@ -44,31 +38,29 @@ export default function HighlightEdit( { activeAttributes, value, onChange } ) {
 	}
 
 	return (
-		<BlockFormatControls>
-			<Toolbar>
-				<Dropdown
-					className="highlight-color"
-					contentClassName="highlight-color__popover"
-					position="bottom right"
-					renderToggle={ ( { isOpen, onToggle } ) => (
-						<IconButton
-							icon={ icon }
-							label="Highlight color"
-							aria-haspopup="true"
-							aria-expanded={ isOpen }
-							onClick={ onToggle }
-						/>
-					) }
-					renderContent={ () => (
-						<ColorPalette
-							colors={ COLORS }
-							value={ currentColor }
-							clearable={ true }
-							onChange={ toggleHighlight }
-						/>
-					) }
-				/>
-			</Toolbar>
-		</BlockFormatControls>
+		<Fill name="RichText.ToolbarControls.text-color">
+			<Dropdown
+				className="highlight-color"
+				contentClassName="highlight-color__popover"
+				position="bottom right"
+				renderToggle={ ( { isOpen, onToggle } ) => (
+					<Button
+						icon={ icon }
+						label="Highlight Color"
+						aria-haspopup="true"
+						aria-expanded={ isOpen }
+						onClick={ onToggle }
+					/>
+				) }
+				renderContent={ () => (
+					<ColorPalette
+						colors={ COLORS }
+						value={ currentColor }
+						clearable={ true }
+						onChange={ toggleHighlight }
+					/>
+				) }
+			/>
+		</Fill>
 	);
 }
