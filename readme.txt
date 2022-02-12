@@ -2,7 +2,7 @@
 Contributors: mamaduka
 Tags: highlight, format, block editor, gutenberg
 Requires at least: 5.7
-Tested up to: 5.6
+Tested up to: 5.9
 Stable tag: 1.2.0
 Requires PHP: 5.6
 License: GPLv2 or later
