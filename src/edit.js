@@ -2,7 +2,7 @@
  * WordPress dependencies
  */
 import { toggleFormat } from '@wordpress/rich-text';
-import { Button, ColorPalette, Dropdown, Fill } from '@wordpress/components';
+import { Button, ColorPalette, Dropdown, Fill, ToolbarButton } from '@wordpress/components';
 
 /**
  * Internal dependencies
@@ -38,13 +38,13 @@ export default function HighlightEdit( { activeAttributes, value, onChange } ) {
 	}
 
 	return (
-		<Fill name="RichText.ToolbarControls.text-color">
+		<Fill name="RichText.ToolbarControls.link">
 			<Dropdown
 				className="highlight-color"
 				contentClassName="highlight-color__popover"
 				position="bottom right"
 				renderToggle={ ( { isOpen, onToggle } ) => (
-					<Button
+					<ToolbarButton
 						icon={ icon }
 						label="Highlight Color"
 						aria-haspopup="true"
